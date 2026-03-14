@@ -1,10 +1,23 @@
 import React from 'react'
-
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
-    <footer className='footer'>
-        Portafolio de Alejandro Lora Garza WEB &copy; React - 2025
-    </footer>
+    <motion.footer className='footer'
+      initial={{
+        y: 50,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+      }}
+    >
+      Portafolio de Alejandro Lora Garza WEB &copy; React - 2025
+    </motion.footer>
   )
 }
 

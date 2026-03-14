@@ -3,29 +3,27 @@ import React from 'react'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Inicio from "../componentes/Inicio";
 import Portafolio from '../componentes/Portafolio';
-import Servicios from '../componentes/Servicios';
+
 import CV from '../componentes/CV';
 import Contacto from '../componentes/Contacto';
 import Header_nav from '../componentes/layout/Header_nav';
 import Footer from '../componentes/layout/Footer';
-import Particulas_fondo from '../componentes/Particulas_fondo';
-import Particulas2 from '../componentes/Particulas2';
-import { useState } from 'react';
 
 
-const rutas = () => {
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [color, setColor] = useState("primary:#000000"); // Estado en el padre
+
+const rutas = ({ setfondo, icon_color, set_icon_color }) => {
+
+
 
     return (
 
         <BrowserRouter className='cuerpo'>
 
-            <Particulas_fondo />
+
 
             {/*HEADER Y NAVEGACION*/}
-            <Header_nav />
+            <Header_nav setfondo={setfondo} set_icon_color={set_icon_color} />
 
             {/*CONTENIDO CENTRAL*/}
             <section className='content'>
@@ -33,7 +31,7 @@ const rutas = () => {
                     <Route path="/" element={<Inicio />} />
                     <Route path="/inicio" element={<Inicio />} />
                     <Route path="/portafolio" element={<Portafolio />} />
-                    <Route path="/cv" element={<CV />} />
+                    <Route path="/cv" element={<CV icon_color={icon_color}/>} />
                     <Route path="/contacto" element={<Contacto />} />
                     <Route path="*" element={<h1 className='heading'> ERROR 404</h1>} />
                 </Routes>
@@ -41,6 +39,7 @@ const rutas = () => {
 
             {/*FOOTER*/}
             <Footer />
+
 
         </BrowserRouter>
 

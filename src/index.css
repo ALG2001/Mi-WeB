@@ -1,14 +1,22 @@
-body {
+#canva_fondo>canvas {
+  width: 100vw !important;
+  height: 110% !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+body.dark {
   --border-color: black;
   --background-color: black;
   --text-color: black;
   --text-color2: white;
   --transition-delay: 1s;
-  --background-image: url('componentes/imagenes/fondo_blanco.jpg');
+
   margin: 0;
   font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -18,25 +26,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -9;
+  overflow-x: hidden;
 }
 
-body #iconos_HT_white {
-  display: none;
-}
-
-body.dark #iconos_HT {
-  display: inline-block;
-}
-
-
-
-body.dark {
+body {
   --border-color: rgb(255, 255, 255);
   --background-color: white;
   --text-color: rgb(255, 255, 255);
   --text-color2: rgb(0, 0, 0);
   --transition-delay: 1s;
-  --background-image: url('componentes/imagenes/fondo_negro.jpg');
+
 
 
   margin: 0;
@@ -51,15 +50,13 @@ body.dark {
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -9;
+  overflow-x: hidden;
 }
 
-body.dark #iconos_HT_white {
+body #iconos_HT_white {
   display: inline-block;
 }
 
-body.dark #iconos_HT {
-  display: none;
-}
 
 
 /*
@@ -90,165 +87,16 @@ code {
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   height: 130px;
   border-bottom: 3px solid var(--background-color);
   margin-bottom: 30px;
-  backdrop-filter: blur(3px);
-}
-
-@media screen and (max-width: 426px) {
-
-  #p_inicio {
-    font-size: 30px;
-
-  }
-
-  .trabajo {
-    flex-direction: column;
-    position: relative;
-  }
-
-  #trabajo_infoprincipal {
-   width: 100%;
-  }
-
-  #trabajo_infoextra {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .trabajo_infoextra h3{
-    text-align: center;
-  }
-
-  #contact_link {
-    font-size: 20px;
-  }
-
-  #contact{
-    width: 100%;
-  }
-
-  #contact input{
-    width: 90%;
-  }
-
-  #contact textarea{
-    width: 90%;
-  }
-
-  .header {
-    position: relative;
-    height: 75px;
-    width: 100%;
-  }
-
-  .header .logo {
-    width: 15%;
-  }
-
-  #ALG {
-    font-size: 10px;
-  }
-
-  .header .tema {
-    width: 15%;
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .header nav {
-    width: 70%;
-  }
-
-  .header nav ul {
-    position: relative;
-  }
-
-  .header nav ul li {
-    font-size: 11px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .cv .habt {
-    margin-top: 3px;
-  }
-
-  .lista-exp {
-    flex-wrap: wrap;
-  }
-
-  .lista-hab {
-    flex-wrap: wrap;
-    max-height: 100px;
-  }
-
-  .lista-hab .habilidad {
-    font-size: 70px;
-  }
-
-  .lista-exp {
-    flex-wrap: wrap;
-  }
-
-  .lista-exp li {
-    position: relative;
-  }
-
-  .lista-exp li .info {
-    max-width: 70%;
-  }
-
-  .lista-exp li .info_oculta {
-    width: 30%;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .lista-exp li .info_oculta .periodo {
-    padding-left: 8px;
-  }
-
-
-  .lista-educacion-cursos {
-    flex-wrap: wrap;
-  }
-
-  .lista-educacion-cursos li .info {
-    max-width: 70%;
-  }
-
-  .lista-educacion-cursos li .info_oculta2 {
-    width: 30%;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .lista-habb .hab_text {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  #edu_title {
-    padding-top: 50px;
-  }
-
-  .lista-id li .id_label {
-    opacity: 1;
-    margin-left: 5px;
-    font-weight: 300;
-  }
-
-
+  backdrop-filter: blur(5px);
 }
 
 .header .logo {
-  flex-grow: 2;
   display: flex;
   color: var(--text-color);
 }
@@ -315,13 +163,13 @@ code {
 }
 
 .footer {
-  min-height: 100px;
+  min-height: 50px;
   text-align: center;
   font-size: 14px;
   margin-top: 30px;
   padding-top: 30px;
   border-top: 3px solid var(--border-color);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
   color: var(--text-color);
 }
 
@@ -331,7 +179,7 @@ code {
   padding-left: 0px;
   display: flex;
   flex-direction: row;
-  gap: 10px
+  gap: 2rem;
 }
 
 .lista-educacion-cursos {
@@ -349,12 +197,17 @@ code {
 }
 
 .lista-exp h3 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
   font-weight: 800;
-  margin-top: 5px;
+  font-size: 1.3rem;
   color: var(--text-color);
 }
 
 .lista-educacion-cursos h3 {
+  grid-area: titulo;
   font-weight: 800;
   margin-top: 5px;
   color: var(--text-color);
@@ -373,7 +226,7 @@ code {
 }
 
 .lista-exp p {
-  transition: all 300ms;
+  display: flex;
   color: var(--text-color);
 }
 
@@ -386,9 +239,11 @@ code {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 0px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
   transition: all 150ms ease;
 }
+
+
 
 .lista-educacion-cursos li {
   position: relative;
@@ -399,18 +254,17 @@ code {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 0px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
   transition: all 150ms ease;
 }
 
 .lista-exp li .info {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 0;
+  justify-content: stretch;
+  padding: 1.5rem;
 }
 
 .lista-educacion-cursos li .info {
@@ -471,15 +325,7 @@ code {
 }
 
 .periodo {
-  display: flex;
-  width: 100%;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 10px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
+  grid-area: periodo;
 }
 
 .periodo2 {
@@ -496,16 +342,9 @@ code {
 
 
 .tecnologias {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .tecnologias li {
@@ -514,6 +353,8 @@ code {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  border: none;
+  color: var(--text-color);
 }
 
 .img_card {
@@ -521,27 +362,17 @@ code {
 }
 
 
-
-@keyframes aparecer {
-  from {
-    transform: translateX(-300px);
-    /* opacity: 0; */
-  }
-
-  to {
-    transform: translateX(0px);
-    /* opacity: 1; */
-  }
-}
-
 .cv {
-  animation: aparecer 500ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .cv h2,
 h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: var(--text-color)
 }
 
@@ -555,33 +386,37 @@ h1 {
   list-style: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 150px;
+  min-height: 150px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   padding: 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  align-items: stretch;
+  justify-items: center;
+  backdrop-filter: blur(5px);
 }
 
 .lista-hab li {
+  position: relative;
   font-size: 70px;
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  flex: 1;
   border: 0px solid black;
   transition: all 200ms ease-out;
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(3px); */
   color: var(--text-color);
 }
 
 
 .lista-hab li label {
   font-size: 35px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-color);
+  transition: all 200ms ease-out;
 }
 
 .lista-hab li:hover {
@@ -626,6 +461,11 @@ h1 {
   background-color: #360092;
 }
 
+.habilidad:nth-child(7):hover>label {
+  font-size: 40px;
+  font-weight: 800;
+}
+
 .habilidad:nth-child(8):hover {
   font-size: 85px;
   background-color: #75a6d9;
@@ -633,6 +473,11 @@ h1 {
 
 .habilidad:nth-child(9):hover {
   background-color: gray;
+}
+
+.habilidad:nth-child(9):hover>label {
+  font-size: 40px;
+  font-weight: 800;
 }
 
 .lista-habb {
@@ -648,6 +493,7 @@ h1 {
   justify-content: center;
   padding: 0px;
   border: 1px solid var(--border-color);
+  backdrop-filter: blur(5px);
 }
 
 .lista-habb li {
@@ -658,7 +504,7 @@ h1 {
   width: 100%;
   height: 100%;
   transition: all 300ms;
-  backdrop-filter: blur(3px);
+  /* backdrop-filter: blur(3px); */
   color: var(--text-color);
 }
 
@@ -677,14 +523,14 @@ h1 {
   justify-content: center;
   gap: 30px;
   border: 1px solid var(--border-color);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
   height: 50px;
 }
 
 .lista-id li {
   padding: 5px;
   font-weight: 600;
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(3px); */
   align-self: center;
   justify-self: center;
   color: var(--text-color);
@@ -702,18 +548,36 @@ h1 {
   font-weight: 200;
 }
 
-.p_inicio {
-  font-weight: 500;
-  font-size: 60px;
+.container {
+  margin-top: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(2px);
+  width: 100%;
+  text-align: left;
+  visibility: hidden;
+}
+
+.nombre {
+  display: flex;
+  font-size: 4rem;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+
+.p_inicio {
+  font-size: 2.5rem;
+  display: flex;
+  align-self: flex-start;
   color: var(--text-color);
+  will-change: transform, opacity;
+  width: 75%;
 }
 
 #contact_link {
-  padding: 5px;
+  padding: 10px;
   text-decoration: none;
   border: 3px solid var(--border-color);
   color: var(--text-color);
@@ -726,7 +590,9 @@ h1 {
 }
 
 .contact {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
 }
 
 .contact input,
@@ -745,7 +611,7 @@ textarea {
   margin-left: 0px;
   margin-right: 0px;
   background: none;
-  backdrop-filter: blur(3px);
+  /* backdrop-filter: blur(3px); */
   color: var(--text-color);
 }
 
@@ -770,6 +636,9 @@ textarea {
 }
 
 .image_slider {
+  grid-area: slider;
+  align-self: center;
+  display: flex;
   position: relative;
   width: 100%;
   aspect-ratio: 12 / 8;
@@ -808,24 +677,21 @@ textarea {
 }
 
 .trabajo {
-  position: relative;
-  width: 100%;
-  display: flex;
+  width: 90%;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "slider info";
   margin-top: 10px;
   margin-bottom: 20px;
   border: 1px solid var(--border-color);
   transition: all 200ms ease;
+  align-self: center;
 }
+
 
 .trabajo:hover {
   box-shadow: 0px 0px 20px #3e3e3e;
-}
-
-.trabajo_infoprincipal {
-  position: relative;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
 }
 
 #trabajo_titulo {
@@ -835,6 +701,8 @@ textarea {
   margin-top: 0;
   width: 100%;
   text-align: center;
+  grid-area: header;
+  padding: 1rem 0rem 1rem 0rem;
 }
 
 #trabajo_titulo>a {
@@ -843,14 +711,14 @@ textarea {
 }
 
 .trabajo_infoextra {
-  padding-left: 10px;
+  grid-area: info;
   position: relative;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
   font-size: 25px;
   font-weight: 500;
   color: var(--text-color);
@@ -862,11 +730,6 @@ textarea {
   font-size: 20px;
 }
 
-#iconos_HT {
-  padding-top: 10px;
-  padding-left: 5px;
-  margin: 0;
-}
 
 #iconos_HT_white {
   padding-top: 10px;
@@ -898,326 +761,6 @@ textarea {
   cursor: pointer;
 }
 
-@media screen and (max-width: 321px) {
-
-  #p_inicio {
-    font-size: 27px;
-
-  }
-
-  .trabajo {
-    flex-direction: column;
-    position: relative;
-  }
-
-  #trabajo_infoprincipal {
-   width: 100%;
-  }
-
-  #trabajo_infoextra {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .trabajo_infoextra h3{
-    text-align: center;
-  }
-
-  #contact_link {
-    font-size: 20px;
-  }
-
-  #contact{
-    width: 100%;
-  }
-
-  #contact input{
-    width: 90%;
-  }
-
-  #contact textarea{
-    width: 90%;
-  }
-
-  .header {
-    position: relative;
-    height: 75px;
-    width: 100%;
-  }
-
-  .header .logo {
-    width: 15%;
-  }
-
-  #ALG {
-    font-size: 8px;
-  }
-
-  .header .tema {
-    width: 15%;
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .header nav {
-    width: 70%;
-  }
-
-  .header nav ul {
-    position: relative;
-  }
-
-  .header nav ul li {
-    font-size: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-weight: 400;
-  }
-
-  .cv .habt {
-    margin-top: 3px;
-  }
-
-  .lista-exp {
-    flex-wrap: wrap;
-  }
-
-  .lista-hab {
-    flex-wrap: wrap;
-    max-height: 100px;
-  }
-
-  .lista-hab .habilidad {
-    font-size: 50px;
-  }
-
-  #NoSQL{
-    font-size: 20px;
-  }
-
-  #csharp{
-    font-size: 20px;
-  }
-
-  .lista-exp {
-    flex-wrap: wrap;
-  }
-
-  .lista-exp li {
-    position: relative;
-  }
-
-  .lista-exp li .info {
-    max-width: 70%;
-  }
-
-  .lista-exp li .info_oculta {
-    width: 30%;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .lista-exp li .info_oculta .periodo {
-    padding-left: 8px;
-  }
-
-
-  .lista-educacion-cursos {
-    flex-wrap: wrap;
-  }
-
-  .lista-educacion-cursos li .info {
-    max-width: 70%;
-  }
-
-  .lista-educacion-cursos li .info_oculta2 {
-    width: 30%;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .lista-habb .hab_text {
-    font-size: 12px;
-    text-align: center;
-  }
-
-  #edu_title {
-    padding-top: 50px;
-  }
-
-  .lista-id li {
-    font-size: 15px;
-  }
-
-  .lista-id li .id_label {
-    opacity: 1;
-    margin-left: 5px;
-    font-weight: 300;
-    font-size: 15px;
-  }
-
-
-}
-
-@media screen and (max-width: 376px) {
-
-  #p_inicio {
-    font-size: 27px;
-
-  }
-
-  .trabajo {
-    flex-direction: column;
-    position: relative;
-  }
-
-  #trabajo_infoprincipal {
-   width: 100%;
-  }
-
-  #trabajo_infoextra {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .trabajo_infoextra h3{
-    text-align: center;
-  }
-
-  #contact_link {
-    font-size: 20px;
-  }
-
-  #contact{
-    width: 100%;
-  }
-
-  #contact input{
-    width: 90%;
-  }
-
-  #contact textarea{
-    width: 90%;
-  }
-
-  .header {
-    position: relative;
-    height: 75px;
-    width: 100%;
-  }
-
-  .header .logo {
-    width: 15%;
-  }
-
-  #ALG {
-    font-size: 8px;
-  }
-
-  .header .tema {
-    width: 15%;
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .header nav {
-    width: 70%;
-  }
-
-  .header nav ul {
-    position: relative;
-  }
-
-  .header nav ul li {
-    font-size: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-weight: 400;
-  }
-
-  .cv .habt {
-    margin-top: 3px;
-  }
-
-  .lista-exp {
-    flex-wrap: wrap;
-  }
-
-  .lista-hab {
-    flex-wrap: wrap;
-    max-height: 100px;
-  }
-
-  .lista-hab .habilidad {
-    font-size: 50px;
-  }
-
-  #NoSQL{
-    font-size: 20px;
-  }
-
-  #csharp{
-    font-size: 20px;
-  }
-
-  .lista-exp {
-    flex-wrap: wrap;
-  }
-
-  .lista-exp li {
-    position: relative;
-  }
-
-  .lista-exp li .info {
-    max-width: 70%;
-  }
-
-  .lista-exp li .info_oculta {
-    width: 30%;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .lista-exp li .info_oculta .periodo {
-    padding-left: 8px;
-  }
-
-
-  .lista-educacion-cursos {
-    flex-wrap: wrap;
-  }
-
-  .lista-educacion-cursos li .info {
-    max-width: 70%;
-  }
-
-  .lista-educacion-cursos li .info_oculta2 {
-    width: 30%;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .lista-habb .hab_text {
-    font-size: 12px;
-    text-align: center;
-  }
-
-  #edu_title {
-    padding-top: 50px;
-  }
-
-  .lista-id li {
-    font-size: 15px;
-  }
-
-  .lista-id li .id_label {
-    opacity: 1;
-    margin-left: 5px;
-    font-weight: 300;
-    font-size: 15px;
-  }
-
-
+.hamburger {
+  display: none;
 }

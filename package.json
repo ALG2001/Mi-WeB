@@ -5,6 +5,9 @@
   "dependencies": {
     "cra-template": "1.2.0",
     "emailjs-com": "^3.2.0",
+    "motion": "^12.23.6",
+    "motion-plus": "^1.4.1",
+    "particles.js": "^2.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -12,8 +15,10 @@
     "react-router-dom": "^6.28.1",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.12.2",
+    "three": "^0.174.0",
     "tsparticles": "^3.7.1",
-    "tsparticles-slim": "^2.12.0"
+    "tsparticles-slim": "^2.12.0",
+    "vanta": "^0.5.24"
   },
   "scripts": {
     "start": "react-scripts start",
