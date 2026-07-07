@@ -9,7 +9,7 @@ const FondoOla = ({ fondo }) => {
     if (!vantaRef.current) {
       vantaRef.current = WAVES({
         el: containerRef.current,
-        mouseControls: false,
+        mouseControls: true,
         touchControls: false,
         gyroControls: false,
         minHeight: 0.0,

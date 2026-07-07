@@ -19,27 +19,13 @@ const Inicio = () => {
           Soy licenciado en multimedia y animación dígital, con experiencia en desarrollo web front-end y back-end. Actualmente trabajo en Quanta Server y en proyectos independientes como freelancer.
         </p>
       </div>
-      <motion.h2
-        initial={{
-          opacity: 0,
-          y: 50,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.5,
-          ease: "easeOut",
-        }}
-      >
         <motion.div
           whileHover={{ x: 10 }}
           transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
+          className="contact_button"
         >
           <Link id="contact_link" to="/contacto">Contáctame</Link>
         </motion.div>
-      </motion.h2>
     </div>
   );
 };

@@ -577,23 +577,27 @@ h1 {
 }
 
 .p_inicio {
-  font-size: clamp(12px, calc(12px + 4vw), 40px);
+  font-size: clamp(12px, calc(12px + 4vw), 30px);
   font-weight: 300;
   display: flex;
   align-self: flex-start;
   color: var(--text-color);
   will-change: transform, opacity;
-  width: 75%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+.contact_button {
+ width: fit-content;;
 }
 
 #contact_link {
-  padding: 10px;
   text-decoration: none;
-  border: 3px solid var(--border-color);
   color: var(--text-color);
   transition: all 300ms;
+  width: fit-content;
+  padding: 10px;
+  border: 2px solid var(--border-color);
 }
 
 #contact_link:hover {

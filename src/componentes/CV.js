@@ -35,12 +35,12 @@ const CV = ({ icon_color }) => {
         viewport={{ once: true, amount: 0.7 }}
       >
         <h2 className='exp'>Experiencia
-          <lord-icon
+        {/*   <lord-icon
             src="https://cdn.lordicon.com/lzgmgrnn.json"
             id="iconos_HT_white"
             trigger="loop"
             delay="5000"
-            colors={icon_color} />
+            colors={icon_color} /> */}
         </h2>
         <ul className='lista-exp'>
           <li id='exp1'>
@@ -89,12 +89,12 @@ const CV = ({ icon_color }) => {
         viewport={{ once: true, amount: 0.7 }}
       >
         <h2 className='habt'>Habilidades Técnicas
-          <lord-icon
+         {/*  <lord-icon
             src="https://cdn.lordicon.com/zrtfxghu.json"
             id="iconos_HT_white"
             trigger="loop"
             delay="5000"
-            colors={icon_color} />
+            colors={icon_color} /> */}
         </h2>
         <ul className='lista-hab'>
           <li className='habilidad'><FaHtml5 /></li>
@@ -117,12 +117,12 @@ const CV = ({ icon_color }) => {
       >
         <div className='view'>
           <h2 className='edu_title' id='edu_title'>Educación y Cursos
-            <lord-icon
+            {/* <lord-icon
               src="https://cdn.lordicon.com/lyrrgrsl.json"
               id="iconos_HT_white"
               trigger="loop"
               delay="5000"
-              colors={icon_color} />
+              colors={icon_color} /> */}
           </h2>
           <ul className='lista-educacion-cursos'>
             <li>
@@ -155,12 +155,12 @@ const CV = ({ icon_color }) => {
       >
         <div className='view'>
           <h2>Habilidades Blandas
-            <lord-icon
+          {/*   <lord-icon
               src="https://cdn.lordicon.com/nizfqlnk.json"
               id="iconos_HT_white"
               trigger="loop"
               delay="5000"
-              colors={icon_color} />
+              colors={icon_color} /> */}
           </h2>
           <ul className='lista-habb'>
             <li className='hab_text'>Comunicación Asertiva</li>
@@ -179,13 +179,13 @@ const CV = ({ icon_color }) => {
       >
         <div className='view'>
           <h2 className='idi'>Idiomas
-            <lord-icon
+            {/* <lord-icon
               src="https://cdn.lordicon.com/fdxqrdfe.json"
               id="iconos_HT_white"
               trigger="loop"
               delay="5000"
               colors={icon_color}>
-            </lord-icon>
+            </lord-icon> */}
           </h2>
           <ul className='lista-id'>
             <li>Español<label className='id_label'>Nativo</label></li>
