@@ -23,11 +23,12 @@ const Portafolio = () => {
 
   return (
     <motion.div className='cv'
-      initial={{ x: -100, opacity: 0 }}
+      /* initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
+      transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }} */
     >
-      {
+      <div className='lista-trabajos'>
+      { 
         trabajos.map(trabajo => {
           return (
             <>
@@ -35,8 +36,8 @@ const Portafolio = () => {
                 <h2 id="trabajo_titulo"><Link>{trabajo.nombre}</Link></h2>
                 <SliderImagenes imagenurl={trabajo.id === "pia_bdm" ? imagenesBDM : trabajo.id === "pia_mad" ? imagenesAAVD : []} />
                 <div className='trabajo_infoextra' id='trabajo_infoextra'>
-                  <h3>{trabajo.tecnologías}</h3>
                   <span>{trabajo.categorias}</span>
+                  <h3>{trabajo.tecnologías}</h3>
                   <p>{trabajo.descripcion}</p>
                 </div>
               </motion.article>
@@ -44,7 +45,7 @@ const Portafolio = () => {
           );
         })
       }
-
+      </div>
     </motion.div>
   )
 }
